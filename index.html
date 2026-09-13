@@ -5,311 +5,429 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>寄島 海鮮焼き もへじ｜岡山・浅口市の牡蠣小屋</title>
-<meta name="description" content="岡山県浅口市寄島町の海鮮焼き小屋「もへじ」。牡蠣1kg900円。12月1日から3月31日までの期間限定営業。屋根付きの広い飲食ブースと無料駐車場で、手ぶらで炭火焼きが楽しめます。">
+<meta name="description" content="岡山県浅口市寄島町の海鮮焼き小屋「もへじ」。殻付き牡蠣1kg 900円。12月1日から3月31日までの期間限定営業。屋根付きの広い飲食ブースと無料駐車場で、手ぶらで炭火焼きが楽しめます。">
+<meta name="format-detection" content="telephone=no">
 <meta property="og:type" content="website">
 <meta property="og:title" content="寄島 海鮮焼き もへじ｜岡山・浅口市の牡蠣小屋">
-<meta property="og:description" content="牡蠣1kg900円。12月1日から3月31日までの期間限定営業。手ぶらで来て、好きなだけ焼いて食べる海鮮焼き小屋です。">
-<meta property="og:image" content="images/hero-grill.jpg">
-<meta name="format-detection" content="telephone=no">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%AA%3C/text%3E%3C/svg%3E">
+<meta property="og:description" content="殻付き牡蠣1kg 900円。12月1日から3月31日までの期間限定営業。手ぶらで来て、好きなだけ焼いて食べる海鮮焼き小屋です。">
+<meta property="og:image" content="images/band-oysters.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; }
-  a { color: #c2461a; }
-  a:hover { color: #9c3813; }
-  .mh-desknav { display: flex; align-items: center; gap: 26px; font-size: 13.5px; font-weight: 500; }
-  .mh-burger { display: none; background: none; border: 0; padding: 8px; cursor: pointer; flex-direction: column; gap: 5px; }
-  .mh-mobnav { display: none; flex-direction: column; background: #faf6ee; border-top: 1px solid rgba(20,50,60,0.1); }
-  .mh-mobnav.is-open { display: flex; }
-  @media (max-width: 880px) {
-    .mh-desknav { display: none; }
-    .mh-burger { display: flex; }
+  :root{
+    --paper:#fffdf8;
+    --ink:#1c1815;
+    --sub:#6b6055;
+    --ember:#d2481b;
+    --line:rgba(28,24,21,.12);
+    --sand:#f2ece0;
   }
-  .mh-2col { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: clamp(34px, 5vw, 68px); align-items: center; }
-  .mh-3col { display: grid; grid-template-columns: repeat(auto-fit, minmax(252px, 1fr)); gap: 22px; }
-  .mh-menugrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: clamp(26px, 4vw, 52px); align-items: start; }
-  .mh-photorow { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; align-items: start; }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New',sans-serif;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:var(--ember);}
+  .num{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.01em;}
+
+  /* 日本語の改行制御：文節で折り返し、助詞の前で切れないようにする */
+  h1,h2,h3{text-wrap:balance;word-break:auto-phrase;}
+  p,dd,dt,li,figcaption{word-break:auto-phrase;overflow-wrap:anywhere;line-break:strict;}
+  p{text-wrap:pretty;}
+  /* 画面幅別の改行：sp=760px以下だけ / pc=761px以上だけ */
+  br.sp{display:none;}
+  @media(max-width:760px){
+    br.pc{display:none;}
+    br.sp{display:inline;}
+  }
+
+  /* 画面いっぱいのセクション */
+  .full{
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:clamp(60px,10vh,120px) 24px;
+    position:relative;
+  }
+  .wrap{width:100%;max-width:1040px;margin:0 auto;}
+
+  /* 通常セクション */
+  .sec{padding:clamp(90px,14vh,170px) 24px;}
+
+  .eyebrow{
+    font-size:11.5px;letter-spacing:.36em;padding-left:.36em;
+    color:var(--ember);font-weight:700;margin:0 0 24px;
+  }
+  h2{
+    font-size:clamp(27px,4.6vw,46px);font-weight:900;
+    letter-spacing:.02em;line-height:1.45;margin:0;
+  }
+  .lead{
+    font-size:clamp(14.5px,1.6vw,16.5px);line-height:2.15;
+    color:var(--sub);margin:26px 0 0;
+  }
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:80;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:16px clamp(18px,4vw,40px);
+    background:rgba(255,253,248,.86);backdrop-filter:blur(12px);
+    border-bottom:1px solid transparent;transition:border-color .3s;
+  }
+  header.stuck{border-bottom-color:var(--line);}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);}
+  .brand img{width:42px;height:42px;display:block;}
+  .brand .nm{display:flex;flex-direction:column;line-height:1.25;}
+  .brand b{font-size:19px;font-weight:900;letter-spacing:.1em;}
+  .brand span{font-size:10px;letter-spacing:.18em;color:var(--sub);white-space:nowrap;}
+  nav{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:500;}
+  nav a{color:var(--ink);text-decoration:none;white-space:nowrap;}
+  .tel{
+    background:var(--ember);color:#fff!important;text-decoration:none;
+    padding:11px 21px;border-radius:4px;font-size:13px;font-weight:700;white-space:nowrap;
+  }
+  .burger{display:none;background:none;border:0;padding:8px;cursor:pointer;flex-direction:column;gap:5px;}
+  .burger span{display:block;width:22px;height:2px;background:var(--ink);}
+  .mob{display:none;position:fixed;inset:56px 0 auto;z-index:79;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;}
+  .mob.open{display:flex;}
+  .mob a{padding:16px 24px;text-decoration:none;color:var(--ink);border-top:1px solid var(--line);font-size:15px;}
+  @media(max-width:900px){nav{display:none;}.burger{display:flex;}}
+
+  /* ヒーロー */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,9,7,.5) 0%,rgba(12,9,7,.15) 35%,rgba(12,9,7,.85) 100%);}
+  .hero .inner{position:relative;width:100%;max-width:1040px;margin:0 auto;padding:0 24px clamp(70px,12vh,120px);color:#fff;}
+  .hero h1{font-size:clamp(38px,8.4vw,86px);font-weight:900;line-height:1.22;letter-spacing:.02em;margin:0;text-shadow:0 2px 30px rgba(0,0,0,.4);}
+  .hero p{font-size:clamp(14px,1.8vw,17px);line-height:1.95;margin:22px 0 0;max-width:520px;color:rgba(255,255,255,.9);text-shadow:0 1px 14px rgba(0,0,0,.5);}
+  .scrollhint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.65);font-size:10px;letter-spacing:.3em;}
+
+  /* 期間 */
+  .period{background:var(--ink);color:var(--paper);}
+  .period .big{
+    font-size:clamp(52px,15vw,168px);line-height:1;
+    display:flex;align-items:center;justify-content:center;
+    gap:clamp(10px,2.4vw,30px);flex-wrap:wrap;margin:14px 0 0;
+  }
+  .period .big i{font-style:normal;font-size:.36em;font-weight:400;opacity:.55;}
+  .period .dash{color:rgba(255,253,248,.45);font-weight:400;}
+  .period .note{margin-top:34px;font-size:13.5px;letter-spacing:.14em;color:rgba(255,253,248,.55);}
+
+  /* 価格 */
+  .price .kg{font-size:clamp(17px,2.4vw,23px);font-weight:700;letter-spacing:.1em;margin:0;}
+  .price .yen{font-size:clamp(80px,20vw,220px);line-height:.95;color:var(--ink);margin:6px 0 0;}
+  .price .yen small{font-size:.26em;font-weight:500;margin-left:.06em;}
+  .price .cap{margin-top:30px;font-size:15px;line-height:2.1;color:var(--sub);}
+
+  /* 3つの安心 */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:clamp(28px,4vw,56px);margin-top:clamp(46px,6vw,76px);text-align:left;}
+  .card h3{font-size:19px;font-weight:700;margin:20px 0 12px;letter-spacing:.03em;}
+  .card p{font-size:14.5px;line-height:2.05;color:var(--sub);margin:0;}
+  .card .ico{width:38px;height:38px;color:var(--ember);}
+
+  /* ステップ */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:clamp(26px,3.6vw,44px);margin-top:clamp(44px,6vw,72px);text-align:left;}
+  .step .n{font-size:15px;font-weight:700;color:var(--sub);letter-spacing:.1em;}
+  .step h3{font-size:20px;font-weight:700;margin:12px 0;letter-spacing:.03em;}
+  .step p{font-size:14.5px;line-height:2.05;color:var(--sub);margin:0;}
+
+  /* メニュー */
+  .menuwrap{background:var(--sand);}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:clamp(30px,4.5vw,64px);margin-top:clamp(42px,5vw,66px);text-align:left;}
+  .cols h3{font-size:15px;font-weight:700;letter-spacing:.16em;margin:0 0 4px;padding-bottom:12px;border-bottom:2px solid var(--ink);}
+  .cols h3+h3{margin-top:40px;}
+  .row{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px;}
+  .row:last-child{border-bottom:0;}
+  .row dt{margin:0;}
+  .row dd{margin:0;font-family:'Oswald',sans-serif;font-weight:500;}
+  .row small{display:block;font-size:11.5px;color:var(--sub);margin-top:3px;}
+  .fine{margin-top:34px;font-size:13px;line-height:2.05;color:var(--sub);}
+
+  /* フル幅の写真帯 */
+  .band{position:relative;height:clamp(420px,78vh,780px);overflow:hidden;display:flex;align-items:center;justify-content:center;}
+  .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;}
+  .band .veil{position:absolute;inset:0;background:rgba(10,8,6,.42);}
+  .band .cap{position:relative;color:#fff;text-align:center;padding:0 24px;}
+  .band .cap h2{text-shadow:0 2px 26px rgba(0,0,0,.5);}
+  .band .cap p{font-size:clamp(13.5px,1.6vw,16px);line-height:2;margin:18px 0 0;color:rgba(255,255,255,.9);text-shadow:0 1px 14px rgba(0,0,0,.5);}
+
+  /* ステップの写真 */
+  .step figure{margin:0 0 22px;overflow:hidden;}
+  .step figure img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+
+  /* メニュー表と海鮮の写真 */
+  .boards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(18px,3vw,34px);margin-top:clamp(44px,6vw,70px);align-items:start;}
+  .board{margin:0;}
+  .board img{width:100%;display:block;}
+  .board figcaption{font-size:12.5px;color:var(--sub);text-align:center;margin-top:14px;letter-spacing:.08em;}
+
+  /* アクセス */
+  .access{background:var(--ink);color:var(--paper);}
+  .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(34px,5vw,70px);margin-top:clamp(40px,5vw,62px);text-align:left;}
+  .info .r{display:flex;gap:20px;padding:16px 0;border-top:1px solid rgba(255,253,248,.16);font-size:14.5px;}
+  .info .r:last-of-type{border-bottom:1px solid rgba(255,253,248,.16);}
+  .info dt{flex:0 0 84px;color:var(--ember);font-weight:700;}
+  .info dd{margin:0;line-height:1.85;color:rgba(255,253,248,.92);}
+  .info dd em{font-style:normal;font-size:12.5px;color:rgba(255,253,248,.5);display:block;margin-top:3px;}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;padding:15px 27px;border-radius:4px;font-size:14px;font-weight:700;}
+  .btn.solid{background:var(--ember);color:#fff;}
+  .btn.ghost{background:transparent;color:var(--paper);border:1px solid rgba(255,253,248,.4);}
+  .access img{width:100%;display:block;}
+  .mapwrap{display:flex;height:100%;min-height:clamp(340px,56vh,620px);}
+  .mapwrap iframe{width:100%;height:100%;border:0;display:block;}
+
+  footer{background:#12100e;color:rgba(255,253,248,.62);padding:clamp(56px,8vh,88px) 24px 44px;text-align:center;}
+  footer .mark{width:clamp(112px,15vw,148px);height:auto;display:block;margin:0 auto 26px;}
+  footer .addr{font-size:13px;line-height:2.1;}
+  footer .addr a{color:rgba(255,253,248,.85);text-decoration:none;}
 </style>
 </head>
 <body>
-<div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #22303a; background: #faf6ee; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
 
-  <header style="position: sticky; top: 0; z-index: 60; background: rgba(250,246,238,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(20,50,60,0.12);">
-    <div style="max-width: 1160px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
-      <a href="#top" style="text-decoration: none; color: #14323c; display: flex; align-items: baseline; gap: 10px;">
-        <span style="font-family: 'Shippori Mincho', serif; font-size: 24px; font-weight: 700; letter-spacing: 0.1em;">もへじ</span>
-        <span style="font-size: 10.5px; letter-spacing: 0.2em; color: #6f6558; font-weight: 500; white-space: nowrap;">寄島 海鮮焼き</span>
-      </a>
-      <nav class="mh-desknav">
-        <a href="#price" style="text-decoration: none; color: #3d4b52; white-space: nowrap;">牡蠣の値段</a>
-        <a href="#first" style="text-decoration: none; color: #3d4b52; white-space: nowrap;">はじめての方へ</a>
-        <a href="#menu" style="text-decoration: none; color: #3d4b52; white-space: nowrap;">メニュー</a>
-        <a href="#access" style="text-decoration: none; color: #3d4b52; white-space: nowrap;">アクセス</a>
-        <a href="tel:09089987562" style="text-decoration: none; color: #fff; background: #c2461a; padding: 10px 20px; border-radius: 999px; font-size: 13px; letter-spacing: 0.04em; white-space: nowrap;">090-8998-7562</a>
-      </nav>
-      <button aria-label="メニューを開く" class="mh-burger" id="js-burger" aria-expanded="false">
-        <span style="display: block; width: 22px; height: 2px; background: #14323c; border-radius: 2px;"></span>
-        <span style="display: block; width: 22px; height: 2px; background: #14323c; border-radius: 2px;"></span>
-        <span style="display: block; width: 22px; height: 2px; background: #14323c; border-radius: 2px;"></span>
-      </button>
-    </div>
-    <div class="mh-mobnav" id="js-mobnav">
-      <a href="#price" style="text-decoration: none; color: #22303a; padding: 15px 24px; border-top: 1px solid rgba(20,50,60,0.08); font-size: 15px;">牡蠣の値段</a>
-      <a href="#first" style="text-decoration: none; color: #22303a; padding: 15px 24px; border-top: 1px solid rgba(20,50,60,0.08); font-size: 15px;">はじめての方へ</a>
-      <a href="#menu" style="text-decoration: none; color: #22303a; padding: 15px 24px; border-top: 1px solid rgba(20,50,60,0.08); font-size: 15px;">メニュー</a>
-      <a href="#access" style="text-decoration: none; color: #22303a; padding: 15px 24px; border-top: 1px solid rgba(20,50,60,0.08); font-size: 15px;">アクセス</a>
-      <a href="tel:09089987562" style="text-decoration: none; color: #fff; background: #c2461a; margin: 14px 24px 20px; text-align: center; padding: 15px; border-radius: 999px; font-size: 15px; font-weight: 500;">電話する 090-8998-7562</a>
-    </div>
-  </header>
-
-  <section id="top" style="position: relative; background: #14323c;">
-    <div style="position: relative; min-height: min(86vh, 720px); display: flex; align-items: center; overflow: hidden;">
-      <img src="images/hero-grill.jpg" alt="炭火の網いっぱいに並んだ牡蠣と海鮮" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
-      <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(9,26,33,0.66) 0%, rgba(9,26,33,0.47) 45%, rgba(9,26,33,0.82) 100%);"></div>
-      <div style="position: relative; max-width: 1160px; margin: 0 auto; padding: clamp(78px, 12vw, 128px) 24px; width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <div style="font-size: 11.5px; letter-spacing: 0.42em; color: rgba(255,255,255,0.86); padding-left: 0.42em; margin-bottom: 22px;">OKAYAMA · YORISHIMA</div>
-        <h1 style="font-family: 'Shippori Mincho', serif; font-weight: 700; color: #fff; font-size: clamp(31px, 6.4vw, 60px); line-height: 1.38; margin: 0; letter-spacing: 0.05em; text-shadow: 0 2px 20px rgba(0,0,0,0.42);">寄島の海で、<br>牡蠣を焼く。</h1>
-        <p style="color: rgba(255,255,255,0.92); font-size: clamp(14px, 1.8vw, 16.5px); line-height: 2; margin: 26px 0 0; max-width: 570px; text-shadow: 0 1px 12px rgba(0,0,0,0.45);">水揚げされたばかりの牡蠣を、炭火でじゅわっと。<br>手ぶらで来て、好きなだけ焼いて食べる海鮮焼き小屋です。</p>
-
-        <div style="margin-top: 40px; display: inline-flex; flex-direction: column; align-items: center; gap: 9px; background: rgba(250,246,238,0.97); border-radius: 16px; padding: 22px clamp(24px, 5vw, 48px); box-shadow: 0 16px 44px rgba(0,0,0,0.36);">
-          <div style="font-size: 11.5px; letter-spacing: 0.3em; color: #c2461a; font-weight: 700; padding-left: 0.3em;">今シーズンの営業</div>
-          <div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: clamp(29px, 5.2vw, 48px); color: #14323c; line-height: 1.15; white-space: nowrap;">12<span style="font-size: 0.48em; font-weight: 500;">月</span>1<span style="font-size: 0.48em; font-weight: 500;">日</span><span style="color: #c2461a; margin: 0 0.22em;">—</span>3<span style="font-size: 0.48em; font-weight: 500;">月</span>31<span style="font-size: 0.48em; font-weight: 500;">日</span></div>
-          <div style="font-size: 12.5px; color: #6f6558; letter-spacing: 0.04em;">期間限定オープン ／ 2026年12月1日スタート</div>
-        </div>
-
-        <a href="tel:09089987562" style="margin-top: 26px; text-decoration: none; color: #fff; background: #c2461a; padding: 16px 34px; border-radius: 999px; font-size: 15px; font-weight: 500; letter-spacing: 0.06em; box-shadow: 0 10px 26px rgba(0,0,0,0.32); display: inline-flex; align-items: center; gap: 10px;">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
-          電話で聞いてみる
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="price" style="max-width: 1160px; margin: 0 auto; padding: clamp(66px, 10vw, 118px) 24px;">
-    <div class="mh-2col">
-      <div>
-        <div style="font-size: 11.5px; letter-spacing: 0.32em; color: #c2461a; font-weight: 700; margin-bottom: 20px; padding-left: 0.32em;">寄島の牡蠣</div>
-        <h2 style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: clamp(25px, 3.7vw, 38px); line-height: 1.58; margin: 0 0 24px; letter-spacing: 0.04em;">牡蠣 1kg、<br>900円。</h2>
-        <p style="line-height: 2.1; font-size: 15px; color: #4d5a61; margin: 0 0 18px;">寄島は、瀬戸内でも指折りの牡蠣の産地。目の前の海で育った殻付き牡蠣を、そのままの値段でお出ししています。</p>
-        <p style="line-height: 2.1; font-size: 15px; color: #4d5a61; margin: 0;">足りなければ、その場で何度でも買い足せます。まずは1kgから焼いてみてください。</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px;">
-          <span style="font-size: 12.5px; color: #14323c; border: 1px solid rgba(20,50,60,0.24); padding: 8px 16px; border-radius: 999px;">殻付き・その日の水揚げ</span>
-          <span style="font-size: 12.5px; color: #14323c; border: 1px solid rgba(20,50,60,0.24); padding: 8px 16px; border-radius: 999px;">追加は何度でも</span>
-          <span style="font-size: 12.5px; color: #14323c; border: 1px solid rgba(20,50,60,0.24); padding: 8px 16px; border-radius: 999px;">価格はすべて税込</span>
-        </div>
-      </div>
-      <div>
-        <img src="images/oyster-case.jpg" alt="氷の上に並ぶ殻付きの生牡蠣と、カキ1kg 900円の値札" style="width: 100%; border-radius: 16px; display: block;">
-      </div>
-    </div>
-  </section>
-
-  <section style="background: #14323c; color: #f2ece1;">
-    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(60px, 8vw, 96px) 24px;">
-      <h2 style="font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: clamp(21px, 3vw, 30px); margin: 0 0 40px; text-align: center; letter-spacing: 0.07em; line-height: 1.6;">はじめてでも、ふらっと来られます。</h2>
-      <div class="mh-3col">
-        <div style="background: rgba(250,246,238,0.07); border: 1px solid rgba(250,246,238,0.15); border-radius: 14px; padding: 30px 26px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e8853f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12 12 4l10 8"></path><path d="M4 11v8h16v-8"></path><path d="M9 19v-5h6v5"></path></svg>
-          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 18.5px; font-weight: 600; margin: 18px 0 12px; letter-spacing: 0.05em;">屋根付きで、雨の日も</h3>
-          <p style="font-size: 14px; line-height: 2; color: rgba(242,236,225,0.8); margin: 0;">大きなテントの下に、炭火のテーブルが並んでいます。風や雨をしのげるので、寒い日でも安心して焼けます。</p>
-        </div>
-        <div style="background: rgba(250,246,238,0.07); border: 1px solid rgba(250,246,238,0.15); border-radius: 14px; padding: 30px 26px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e8853f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14"></path><path d="M6 17V9.5L8 6h8l2 3.5V17"></path><circle cx="8" cy="17.6" r="1.7"></circle><circle cx="16" cy="17.6" r="1.7"></circle></svg>
-          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 18.5px; font-weight: 600; margin: 18px 0 12px; letter-spacing: 0.05em;">駐車場も、ひろびろ</h3>
-          <p style="font-size: 14px; line-height: 2; color: rgba(242,236,225,0.8); margin: 0;">駐車場も飲食ブースもゆったりしているので、小さなお子さん連れでも、大人数でわいわい来ていただいても大丈夫です。</p>
-        </div>
-        <div style="background: rgba(250,246,238,0.07); border: 1px solid rgba(250,246,238,0.15); border-radius: 14px; padding: 30px 26px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#e8853f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 14.5h17"></path><path d="M6 14.5c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><path d="M2.5 18.5h19"></path><path d="M9.4 5.6c0-.9.7-1.6 1.6-1.6"></path><path d="M13.6 5.6c0-.9.7-1.6 1.6-1.6"></path></svg>
-          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 18.5px; font-weight: 600; margin: 18px 0 12px; letter-spacing: 0.05em;">道具は、全部あります</h3>
-          <p style="font-size: 14px; line-height: 2; color: rgba(242,236,225,0.8); margin: 0;">炭も網も、軍手やトングもお店のもの。特別な準備はいりません。手ぶらで来て、そのまま焼きはじめられます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="first" style="max-width: 1160px; margin: 0 auto; padding: clamp(66px, 10vw, 118px) 24px;">
-    <div style="text-align: center; margin-bottom: clamp(38px, 5vw, 58px);">
-      <div style="font-size: 11.5px; letter-spacing: 0.32em; color: #c2461a; font-weight: 700; margin-bottom: 18px; padding-left: 0.32em;">はじめての方へ</div>
-      <h2 style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: clamp(25px, 3.7vw, 38px); margin: 0; letter-spacing: 0.05em; line-height: 1.55;">やることは、3つだけ。</h2>
-    </div>
-    <div class="mh-3col">
-      <div style="background: #fff; border-radius: 14px; padding: 32px 28px; border: 1px solid rgba(20,50,60,0.09);">
-        <div style="font-family: 'Oswald', sans-serif; font-size: 40px; font-weight: 500; color: #e2dccd; line-height: 1;">01</div>
-        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 19px; font-weight: 600; margin: 12px 0; letter-spacing: 0.05em;">好きなだけ選ぶ</h3>
-        <p style="font-size: 14.5px; line-height: 2.05; color: #4d5a61; margin: 0;">牡蠣は1kg単位。ホタテ、エビ、イカ、ハマグリ、シャケなども並んでいます。お会計は先にどうぞ。</p>
-      </div>
-      <div style="background: #fff; border-radius: 14px; padding: 32px 28px; border: 1px solid rgba(20,50,60,0.09);">
-        <div style="font-family: 'Oswald', sans-serif; font-size: 40px; font-weight: 500; color: #e2dccd; line-height: 1;">02</div>
-        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 19px; font-weight: 600; margin: 12px 0; letter-spacing: 0.05em;">炭火にのせる</h3>
-        <p style="font-size: 14.5px; line-height: 2.05; color: #4d5a61; margin: 0;">テーブルの炭火に、そのままのせるだけ。牡蠣は、ふっくらして殻が開いたら食べごろです。迷ったらスタッフに声をかけてください。</p>
-      </div>
-      <div style="background: #fff; border-radius: 14px; padding: 32px 28px; border: 1px solid rgba(20,50,60,0.09);">
-        <div style="font-family: 'Oswald', sans-serif; font-size: 40px; font-weight: 500; color: #e2dccd; line-height: 1;">03</div>
-        <h3 style="font-family: 'Shippori Mincho', serif; font-size: 19px; font-weight: 600; margin: 12px 0; letter-spacing: 0.05em;">熱いうちに食べる</h3>
-        <p style="font-size: 14.5px; line-height: 2.05; color: #4d5a61; margin: 0;">レモンをきゅっと絞って、そのまま。足りなければ、何度でも買い足せます。</p>
-      </div>
-    </div>
-    <div style="margin-top: 34px; background: #f2ede2; border-radius: 14px; padding: 24px 28px; display: flex; flex-wrap: wrap; gap: 14px 34px; align-items: center; justify-content: center;">
-      <div style="font-size: 14px; color: #4d5a61;">店内で食べる方は、席料 <strong style="color: #14323c;">500円</strong></div>
-      <div style="width: 1px; height: 18px; background: rgba(20,50,60,0.18);"></div>
-      <div style="font-size: 14px; color: #4d5a61;">炭の追加は <strong style="color: #14323c;">200円</strong></div>
-      <div style="width: 1px; height: 18px; background: rgba(20,50,60,0.18);"></div>
-      <div style="font-size: 14px; color: #4d5a61;">価格はすべて税込</div>
-    </div>
-  </section>
-
-  <section id="menu" style="background: #f2ede2;">
-    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(66px, 10vw, 118px) 24px;">
-      <div style="text-align: center; margin-bottom: clamp(38px, 5vw, 58px);">
-        <div style="font-size: 11.5px; letter-spacing: 0.32em; color: #c2461a; font-weight: 700; margin-bottom: 18px; padding-left: 0.32em;">メニュー</div>
-        <h2 style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: clamp(25px, 3.7vw, 38px); margin: 0 0 16px; letter-spacing: 0.05em; line-height: 1.55;">牡蠣だけじゃ、もったいない。</h2>
-        <p style="font-size: 15px; color: #4d5a61; line-height: 2; margin: 0;">ホタテ、エビ、ハマグリ、イカ。おにぎりや牡蠣飯、ビールもあります。</p>
-      </div>
-
-      <div class="mh-menugrid">
-        <div>
-          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; letter-spacing: 0.12em; color: #14323c; margin: 0; padding-bottom: 10px; border-bottom: 2px solid #c2461a;">焼きもの</h3>
-          <dl style="margin: 0; font-size: 14.5px;">
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">牡蠣 1kg</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">900</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">イカ</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">900</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">ハマグリ 5個</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">1,300</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">エビ</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">750</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">殻付きホタテ</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">690</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">ホタテバター焼</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">500</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">シャケ</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">540</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">ウインナー</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">400</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0;"><dt style="color: #22303a;">バターコーン</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">400</dd></div>
-          </dl>
-
-          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; letter-spacing: 0.12em; color: #14323c; margin: 34px 0 0; padding-bottom: 10px; border-bottom: 2px solid #c2461a;">ごはん</h3>
-          <dl style="margin: 0; font-size: 14.5px;">
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">牡蠣飯</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">600</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0;"><dt style="color: #22303a;">おにぎり</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">100</dd></div>
-          </dl>
-
-          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; letter-spacing: 0.12em; color: #14323c; margin: 34px 0 0; padding-bottom: 10px; border-bottom: 2px solid #c2461a;">とりあえず</h3>
-          <dl style="margin: 0; font-size: 14.5px;">
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">枝豆</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">200</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">キムチ</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">200</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0;"><dt style="color: #22303a;">韓国海苔</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">200</dd></div>
-          </dl>
-        </div>
-
-        <div>
-          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; letter-spacing: 0.12em; color: #14323c; margin: 0; padding-bottom: 10px; border-bottom: 2px solid #c2461a;">お飲みもの</h3>
-          <dl style="margin: 0; font-size: 14.5px;">
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">生ビール</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">600</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">ハイボール</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">500</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">酎ハイ<br><span style="font-size: 12px; color: #6f6558;">レモン・ライム</span></dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">400</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">二階堂<br><span style="font-size: 12px; color: #6f6558;">湯割・緑割・水割</span></dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">400</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">ノンアルコールビール</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">400</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">ソフトドリンク<br><span style="font-size: 12px; color: #6f6558;">コーラ・ウーロン茶・緑茶・オレンジ・カルピス・ジンジャエール</span></dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">300</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0;"><dt style="color: #22303a;">hot緑茶・hotほうじ茶・お水</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">100</dd></div>
-          </dl>
-
-          <h3 style="font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; letter-spacing: 0.12em; color: #14323c; margin: 34px 0 0; padding-bottom: 10px; border-bottom: 2px solid #c2461a;">トッピング</h3>
-          <dl style="margin: 0; font-size: 14.5px;">
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(20,50,60,0.1);"><dt style="color: #22303a;">カットレモン</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">100</dd></div>
-            <div style="display: flex; justify-content: space-between; gap: 14px; padding: 13px 0;"><dt style="color: #22303a;">マヨネーズ</dt><dd style="margin: 0; font-family: 'Oswald', sans-serif; font-weight: 500; color: #14323c;">20</dd></div>
-          </dl>
-
-          <div style="margin-top: 30px; background: #faf6ee; border-radius: 12px; padding: 20px 22px; font-size: 13.5px; line-height: 2; color: #4d5a61;">
-            店内でお召し上がりの方は、席料として500円をいただきます。炭の追加は200円です。<br>価格はすべて税込です。
-          </div>
-        </div>
-      </div>
-
-      <div class="mh-photorow" style="margin-top: clamp(36px, 5vw, 54px);">
-        <img src="images/menu-board.jpg" alt="店内に掲示されたもへじのメニュー表" style="width: 100%; border-radius: 14px; display: block;">
-        <img src="images/seafood.jpg" alt="大ぶりのエビと殻付きホタテ" style="width: 100%; border-radius: 14px; display: block;">
-        <img src="images/oyster-tongs.jpg" alt="トングでつまみ上げた焼きたての牡蠣" style="width: 100%; border-radius: 14px; display: block;">
-      </div>
-    </div>
-  </section>
-
-  <section style="max-width: 1160px; margin: 0 auto; padding: clamp(58px, 8vw, 96px) 24px;">
-    <img src="images/oyster-grill.jpg" alt="網の上でじっくり焼かれる牡蠣" style="width: 100%; height: clamp(210px, 30vw, 320px); object-fit: cover; border-radius: 16px; display: block;">
-  </section>
-
-  <section id="access" style="background: #14323c; color: #f2ece1;">
-    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(66px, 10vw, 110px) 24px;">
-      <div class="mh-2col">
-        <div>
-          <div style="font-size: 11.5px; letter-spacing: 0.32em; color: #e8853f; font-weight: 700; margin-bottom: 20px; padding-left: 0.32em;">アクセス・営業のご案内</div>
-          <h2 style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: clamp(24px, 3.5vw, 35px); line-height: 1.6; margin: 0 0 30px; letter-spacing: 0.05em;">寄島の海沿い、<br>駐車場から、すぐ。</h2>
-
-          <dl style="margin: 0; font-size: 14.5px; line-height: 1.9;">
-            <div style="display: flex; gap: 18px; padding: 15px 0; border-top: 1px solid rgba(242,236,225,0.18);">
-              <dt style="flex: 0 0 86px; color: #e8853f; font-weight: 500;">営業期間</dt>
-              <dd style="margin: 0; color: rgba(242,236,225,0.94);">12月1日 〜 3月31日<br><span style="font-size: 13px; color: rgba(242,236,225,0.62);">期間限定での営業です</span></dd>
-            </div>
-            <div style="display: flex; gap: 18px; padding: 15px 0; border-top: 1px solid rgba(242,236,225,0.18);">
-              <dt style="flex: 0 0 86px; color: #e8853f; font-weight: 500;">営業時間</dt>
-              <dd style="margin: 0; color: rgba(242,236,225,0.94);">［ ◯時 〜 ◯時 ］<br><span style="font-size: 13px; color: rgba(242,236,225,0.62);">定休日：［ ◯曜日 ／ 無休 ］</span></dd>
-            </div>
-            <div style="display: flex; gap: 18px; padding: 15px 0; border-top: 1px solid rgba(242,236,225,0.18);">
-              <dt style="flex: 0 0 86px; color: #e8853f; font-weight: 500;">住所</dt>
-              <dd style="margin: 0; color: rgba(242,236,225,0.94);">岡山県浅口市寄島町12155-141</dd>
-            </div>
-            <div style="display: flex; gap: 18px; padding: 15px 0; border-top: 1px solid rgba(242,236,225,0.18);">
-              <dt style="flex: 0 0 86px; color: #e8853f; font-weight: 500;">駐車場</dt>
-              <dd style="margin: 0; color: rgba(242,236,225,0.94);">あり ／ 無料</dd>
-            </div>
-            <div style="display: flex; gap: 18px; padding: 15px 0; border-top: 1px solid rgba(242,236,225,0.18); border-bottom: 1px solid rgba(242,236,225,0.18);">
-              <dt style="flex: 0 0 86px; color: #e8853f; font-weight: 500;">お電話</dt>
-              <dd style="margin: 0;"><a href="tel:09089987562" style="color: #fff; font-family: 'Oswald', sans-serif; font-size: 20px; letter-spacing: 0.03em; text-decoration: none;">090-8998-7562</a></dd>
-            </div>
-          </dl>
-
-          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px;">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B2%A1%E5%B1%B1%E7%9C%8C%E6%B5%85%E5%8F%A3%E5%B8%82%E5%AF%84%E5%B3%B6%E7%94%BA12155-141" target="_blank" rel="noopener" style="text-decoration: none; color: #14323c; background: #f2ece1; padding: 14px 26px; border-radius: 999px; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 9px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="2.8"></circle></svg>
-              地図で見る
-            </a>
-            <a href="tel:09089987562" style="text-decoration: none; color: #fff; background: #c2461a; padding: 14px 26px; border-radius: 999px; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 9px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
-              電話する
-            </a>
-          </div>
-          <p style="font-size: 13px; color: rgba(242,236,225,0.62); line-height: 1.95; margin: 22px 0 0;">ご予約、団体でのご利用、当日の混み具合などは、お電話かInstagramのメッセージでお気軽にどうぞ。</p>
-        </div>
-
-        <div>
-          <img src="images/booth.jpg" alt="テントの下に炭火のテーブルが並ぶ飲食ブース" style="width: 100%; border-radius: 16px; display: block;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="background: #c2461a; color: #fff;">
-    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 7vw, 86px) 24px; text-align: center;">
-      <h2 style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: clamp(23px, 3.4vw, 34px); margin: 0 0 16px; letter-spacing: 0.06em; line-height: 1.6;">今シーズンは、12月1日から。</h2>
-      <p style="font-size: 15px; line-height: 2; margin: 0 0 32px; color: rgba(255,255,255,0.93);">寄島の牡蠣が、いちばんおいしい季節にお待ちしています。</p>
-      <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
-        <a href="tel:09089987562" style="text-decoration: none; color: #c2461a; background: #fff; padding: 16px 34px; border-radius: 999px; font-size: 15px; font-weight: 700; letter-spacing: 0.04em;">090-8998-7562</a>
-        <a href="https://www.instagram.com/okayama.mohezi/" target="_blank" rel="noopener" style="text-decoration: none; color: #fff; border: 1px solid rgba(255,255,255,0.7); padding: 16px 30px; border-radius: 999px; font-size: 14.5px; font-weight: 500; display: inline-flex; align-items: center; gap: 9px;">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg>
-          Instagram
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer style="background: #0f2831; color: rgba(242,236,225,0.75);">
-    <div style="max-width: 1160px; margin: 0 auto; padding: 42px 24px; display: flex; flex-wrap: wrap; gap: 18px 40px; align-items: center; justify-content: space-between;">
-      <div style="display: flex; align-items: baseline; gap: 11px;">
-        <span style="font-family: 'Shippori Mincho', serif; font-size: 21px; font-weight: 700; color: #f2ece1; letter-spacing: 0.1em;">もへじ</span>
-        <span style="font-size: 11px; letter-spacing: 0.2em;">寄島 海鮮焼き</span>
-      </div>
-      <div style="font-size: 12.5px; line-height: 1.9;">岡山県浅口市寄島町12155-141 ／ 090-8998-7562</div>
-    </div>
-  </footer>
-
+<header id="hd">
+  <a href="#top" class="brand">
+    <img src="images/logo.png" alt="">
+    <span class="nm"><b>もへじ</b><span>寄島 海鮮焼き</span></span>
+  </a>
+  <nav>
+    <a href="#price">牡蠣の値段</a>
+    <a href="#first">はじめての方へ</a>
+    <a href="#menu">メニュー</a>
+    <a href="#access">アクセス</a>
+    <a href="tel:09089987562" class="tel">090-8998-7562</a>
+  </nav>
+  <button class="burger" id="bg" aria-label="メニュー"><span></span><span></span><span></span></button>
+</header>
+<div class="mob" id="mb">
+  <a href="#price">牡蠣の値段</a>
+  <a href="#first">はじめての方へ</a>
+  <a href="#menu">メニュー</a>
+  <a href="#access">アクセス</a>
+  <a href="tel:09089987562">電話する 090-8998-7562</a>
 </div>
-<script src="main.js" defer></script>
+
+<section class="hero" id="top">
+  <img src="images/hero-grill.jpg" alt="炭火の網に並ぶ牡蠣と海鮮">
+  <div class="veil"></div>
+  <div class="inner">
+    <h1>焼くところから、<br class="pc">うまい。</h1>
+    <p>寄島の海で育った牡蠣を、炭火で。<br class="pc">手ぶらで来て、好きなだけ焼いて食べる海鮮焼き小屋です。</p>
+  </div>
+  <div class="scrollhint">SCROLL</div>
+</section>
+
+<section class="full period">
+  <div class="wrap">
+    <p class="eyebrow">今シーズンの営業</p>
+    <div class="big num">
+      <span>12<i>月</i>1<i>日</i></span>
+      <span class="dash">—</span>
+      <span>3<i>月</i>31<i>日</i></span>
+    </div>
+    <p class="note">この期間だけ、店を開けています</p>
+  </div>
+</section>
+
+<section class="band">
+  <img src="images/band-oysters.jpg" alt="氷の上に並ぶ殻付きの生牡蠣">
+</section>
+
+<section class="full price" id="price">
+  <div class="wrap">
+    <p class="eyebrow">寄島の牡蠣</p>
+    <p class="kg">殻付き牡蠣 1kg</p>
+    <p class="yen num">900<small>円</small></p>
+    <p class="cap">目の前の海で育った牡蠣を、そのままの値段で。<br>足りなければ、その場で何度でも買い足せます。</p>
+  </div>
+</section>
+
+<section class="sec" id="first">
+  <div class="wrap" style="text-align:center">
+    <p class="eyebrow">はじめての方へ</p>
+    <h2>手ぶらで、大丈夫です。</h2>
+    <div class="cards">
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 12 4l10 8"></path><path d="M4 11v8h16v-8"></path><path d="M9 19v-5h6v5"></path></svg>
+        <h3>屋根の下で焼けます</h3>
+        <p>大きなテントの下に、炭火のテーブルが並んでいます。風や雨をしのげるので、寒い日でも落ち着いて焼けます。</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14"></path><path d="M6 17V9.5L8 6h8l2 3.5V17"></path><circle cx="8" cy="17.6" r="1.7"></circle><circle cx="16" cy="17.6" r="1.7"></circle></svg>
+        <h3>駐車場が広いです</h3>
+        <p>駐車場も飲食ブースもゆったりしています。小さなお子さん連れでも、大人数でも大丈夫です。</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 14.5h17"></path><path d="M6 14.5c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><path d="M2.5 18.5h19"></path><path d="M9.4 5.6c0-.9.7-1.6 1.6-1.6"></path><path d="M13.6 5.6c0-.9.7-1.6 1.6-1.6"></path></svg>
+        <h3>道具は店にあります</h3>
+        <p>炭も網も、軍手もトングもお店のもの。特別な準備はいりません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <img src="images/band-booth.jpg" alt="屋根付きの広い飲食ブースと炭火のテーブル">
+  <div class="veil"></div>
+  <div class="cap">
+    <h2>屋根の下、ひろびろと。</h2>
+    <p>大人数でも、小さなお子さん連れでも。</p>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--sand)">
+  <div class="wrap" style="text-align:center">
+    <p class="eyebrow">焼き方</p>
+    <h2>やることは、3つだけ。</h2>
+    <div class="steps">
+      <div class="step">
+        <figure><img src="images/oyster-case.jpg" alt="氷の上に並ぶ殻付きの生牡蠣"></figure>
+        <p class="n">01</p>
+        <h3>選ぶ</h3>
+        <p>牡蠣は1kg単位。ホタテ、エビ、イカ、ハマグリなども並んでいます。お会計は、先にどうぞ。</p>
+      </div>
+      <div class="step">
+        <figure><img src="images/oyster-grill.jpg" alt="網の上でじっくり焼かれる牡蠣"></figure>
+        <p class="n">02</p>
+        <h3>焼く</h3>
+        <p>テーブルの炭火にのせるだけ。ふっくらして殻が開いたら、食べごろです。迷ったら声をかけてください。</p>
+      </div>
+      <div class="step">
+        <figure><img src="images/oyster-tongs.jpg" alt="トングでつまみ上げた焼きたての牡蠣"></figure>
+        <p class="n">03</p>
+        <h3>食べる</h3>
+        <p>レモンを絞って、熱いうちに。足りなければ、何度でも買い足せます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec menuwrap" id="menu">
+  <div class="wrap" style="text-align:center">
+    <p class="eyebrow">メニュー</p>
+    <h2>牡蠣だけじゃ、もったいない。</h2>
+    <p class="lead">ホタテ、エビ、ハマグリ、イカ。<br class="pc">おにぎり、牡蠣飯、ビールもあります。</p>
+    <div class="cols">
+      <div>
+        <h3>焼きもの</h3>
+        <dl style="margin:0">
+          <div class="row"><dt>牡蠣 1kg</dt><dd>900</dd></div>
+          <div class="row"><dt>イカ</dt><dd>900</dd></div>
+          <div class="row"><dt>ハマグリ 5個</dt><dd>1,300</dd></div>
+          <div class="row"><dt>エビ</dt><dd>750</dd></div>
+          <div class="row"><dt>殻付きホタテ</dt><dd>690</dd></div>
+          <div class="row"><dt>ホタテバター焼</dt><dd>500</dd></div>
+          <div class="row"><dt>シャケ</dt><dd>540</dd></div>
+          <div class="row"><dt>ウインナー</dt><dd>400</dd></div>
+          <div class="row"><dt>バターコーン</dt><dd>400</dd></div>
+        </dl>
+        <h3>ごはん</h3>
+        <dl style="margin:0">
+          <div class="row"><dt>牡蠣飯</dt><dd>600</dd></div>
+          <div class="row"><dt>おにぎり</dt><dd>100</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>お飲みもの</h3>
+        <dl style="margin:0">
+          <div class="row"><dt>生ビール</dt><dd>600</dd></div>
+          <div class="row"><dt>ハイボール</dt><dd>500</dd></div>
+          <div class="row"><dt>酎ハイ<small>レモン・ライム</small></dt><dd>400</dd></div>
+          <div class="row"><dt>二階堂<small>湯割・緑割・水割</small></dt><dd>400</dd></div>
+          <div class="row"><dt>ノンアルコールビール</dt><dd>400</dd></div>
+          <div class="row"><dt>ソフトドリンク<small>コーラ・ウーロン茶・緑茶・オレンジ・カルピス・ジンジャエール</small></dt><dd>300</dd></div>
+          <div class="row"><dt>hot緑茶・hotほうじ茶・お水</dt><dd>100</dd></div>
+        </dl>
+        <h3>とりあえず・トッピング</h3>
+        <dl style="margin:0">
+          <div class="row"><dt>枝豆／キムチ／韓国海苔</dt><dd>200</dd></div>
+          <div class="row"><dt>カットレモン</dt><dd>100</dd></div>
+          <div class="row"><dt>マヨネーズ</dt><dd>20</dd></div>
+        </dl>
+        <p class="fine">店内でお召し上がりの方は、席料として500円をいただきます。炭の追加は200円です。価格はすべて税込です。</p>
+      </div>
+    </div>
+    <div class="boards">
+      <figure class="board">
+        <img src="images/menu-board.jpg" alt="店内に掲示されたもへじのメニュー表">
+        <figcaption>店内のメニュー表</figcaption>
+      </figure>
+      <figure class="board">
+        <img src="images/seafood.jpg" alt="大ぶりのエビと殻付きホタテ">
+        <figcaption>牡蠣のほかにも、いろいろ</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec access" id="access">
+  <div class="wrap">
+    <div style="text-align:center">
+      <p class="eyebrow">アクセス</p>
+      <h2>寄島の海沿い、<br class="pc">駐車場からすぐ。</h2>
+    </div>
+    <div class="info">
+      <div>
+        <dl style="margin:0">
+          <div class="r"><dt>営業期間</dt><dd>12月1日 〜 3月31日<em>期間限定での営業です</em></dd></div>
+          <div class="r"><dt>営業時間</dt><dd>［ 時間 ］<em>定休日：［ 未定 ］</em></dd></div>
+          <div class="r"><dt>住所</dt><dd>岡山県浅口市寄島町12155-141</dd></div>
+          <div class="r"><dt>駐車場</dt><dd>あり ／ 無料</dd></div>
+          <div class="r"><dt>お電話</dt><dd><a href="tel:09089987562" style="color:#fff;text-decoration:none">090-8998-7562</a></dd></div>
+        </dl>
+        <div class="btns">
+          <a class="btn solid" href="tel:09089987562">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            電話する
+          </a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B2%A1%E5%B1%B1%E7%9C%8C%E6%B5%85%E5%8F%A3%E5%B8%82%E5%AF%84%E5%B3%B6%E7%94%BA12155-141" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="2.8"></circle></svg>
+            地図で見る
+          </a>
+          <a class="btn ghost" href="https://www.instagram.com/okayama.mohezi/" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+            Instagram
+          </a>
+        </div>
+        <p style="font-size:13px;color:rgba(255,253,248,.5);line-height:1.95;margin:22px 0 0">ご予約、団体でのご利用、当日の混み具合などは、お電話かInstagramのメッセージでどうぞ。</p>
+      </div>
+      <div class="mapwrap">
+        <iframe
+          src="https://www.google.com/maps?q=%E5%B2%A1%E5%B1%B1%E7%9C%8C%E6%B5%85%E5%8F%A3%E5%B8%82%E5%AF%84%E5%B3%B6%E7%94%BA12155-141&amp;output=embed"
+          title="寄島 海鮮焼き もへじ の地図"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="mark" src="images/logo-white.png" alt="寄島 海鮮焼き もへじ">
+  <p class="addr">
+    岡山県浅口市寄島町12155-141<br>
+    <a href="tel:09089987562">090-8998-7562</a>　／　営業期間 12月1日〜3月31日
+  </p>
+</footer>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd'),bg=document.getElementById('bg'),mb=document.getElementById('mb');
+  addEventListener('scroll',function(){hd.classList.toggle('stuck',scrollY>10);},{passive:true});
+  bg.addEventListener('click',function(){mb.classList.toggle('open');});
+  mb.addEventListener('click',function(e){if(e.target.closest('a'))mb.classList.remove('open');});
+})();
+</script>
 </body>
 </html>
